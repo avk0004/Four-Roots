@@ -130,14 +130,17 @@ if (form) {
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    const formData = new FormData(form);
-    formData.append('api_key', SECRET_KEY);
+    const params = new URLSearchParams();
+    params.append('name', form.querySelector('#f-name').value);
+    params.append('email', form.querySelector('#f-email').value);
+    params.append('message', form.querySelector('#f-msg').value);
+    params.append('api_key', SECRET_KEY);
 
     try {
       const response = await fetch(form.action, {
         method: 'POST',
-        body: formData,
-        mode: 'no-cors' // Google Apps Script requires no-cors for direct browser POSTs usually
+        body: params,
+        mode: 'no-cors'
       });
 
       // Note: With no-cors, we won't get a "success" body, 
