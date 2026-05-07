@@ -1549,19 +1549,34 @@ details[open] .faq-q {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .marquee {
+    padding: 80px 0;
+  }
+  
+  .logo-card {
+    width: 180px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
   .marquee {
     padding: 60px 0;
   }
   
   .logo-card {
-    width: 160px;
-    height: 80px;
-    border-radius: 18px;
-    padding: 1.5rem;
+    width: 300px; /* User requested: mobile ratio width of 300px */
+    height: 150px;
+    border-radius: 20px;
   }
 
   .logo-card img {
-    max-width: 90px;
+    max-width: 180px;
+    max-height: 80px;
+  }
+  
+  .marquee-fade {
+    width: 30%;
   }
 }

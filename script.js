@@ -322,12 +322,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const track = document.getElementById("track");
     if (!track) return;
 
-    // Duplicate content for infinite loop
+    // Duplicate content for infinite loop (only once)
     track.innerHTML += track.innerHTML;
 
     let position = 0;
-    const speed = 0.8; // Butter-smooth cinematic speed
     let isPaused = false;
+    
+    // Dynamic speed based on screen width
+    const getSpeed = () => {
+      const width = window.innerWidth;
+      if (width < 480) return 0.5;  // Slower on mobile for better readability
+      if (width < 1024) return 0.7; // Medium on tablet
+      return 0.9;                   // Default premium speed
+    };
+
+    let speed = getSpeed();
 
     // Use requestAnimationFrame for 60fps motion
     const animate = () => {
@@ -335,7 +344,6 @@ document.addEventListener('DOMContentLoaded', () => {
         position -= speed;
         
         // Reset position seamlessly when half the track width is reached
-        // We use scrollWidth / 2 because we duplicated the content once
         if (Math.abs(position) >= track.scrollWidth / 2) {
           position = 0;
         }
@@ -345,11 +353,15 @@ document.addEventListener('DOMContentLoaded', () => {
       requestAnimationFrame(animate);
     };
 
-    // Pause on hover for premium interaction
+    // Update speed on resize
+    window.addEventListener('resize', () => {
+      speed = getSpeed();
+    });
+
+    // Pause on hover
     track.addEventListener('mouseenter', () => isPaused = true);
     track.addEventListener('mouseleave', () => isPaused = false);
 
-    // Initial kick-off
     animate();
   };
 
