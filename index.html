@@ -4,449 +4,449 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Four Root Digital </title>
+  <title>Four Root Digital — Premium Web Design & Development</title>
   <meta name="description"
-    content="Four Root Digital is a self-taught design collective building high-converting digital experiences for ambitious brands.">
+    content="Premium web design & development for small businesses worldwide. We build digital presence that drives real growth.">
+
+  <!-- Fontshare — Inter Tight, Cabinet Grotesk, Boska, Bonny -->
   <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Mono:wght@400;500&display=swap"
+    href="https://api.fontshare.com/v2/css?f[]=inter-tight@400,500,700,800&f[]=cabinet-grotesk@400,500,700&f[]=boska@400,500,700,900&f[]=bonny@400&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="fourroot-logo-light.png">
 
-
-  <link rel="icon" type="image/svg+xml" href="./FRD.png">
-
+  <!-- GSAP & SplitType -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
 </head>
 
-<body>
+<body class="no-scroll">
+
+  <!-- ── NOISE OVERLAY ── -->
+  <div class="noise-overlay"></div>
 
   <!-- ── LOADER ── -->
   <div class="loader" id="loader">
-    <div class="loader-inner">
-      <span class="loader-name">FOUR ROOT DIGITAL</span>
-      <div class="loader-bar">
-        <div class="loader-fill" id="loaderFill"></div>
+    <div class="loader-content">
+      <span class="loader-logo">FOUR ROOT DIGITAL</span>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loaderBar"></div>
       </div>
-      <span class="mono loader-status" id="loaderStatus">Loading</span>
+      <div class="loader-percent" id="loaderPercent">0</div>
     </div>
   </div>
 
-  <!-- ── NAV ── -->
+  <!-- ── CUSTOM CURSOR ── -->
+  <div id="cursor"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- ── NAVIGATION ── -->
   <header class="nav" id="nav">
-    <a href="#home" class="nav-logo">Four Root Digital.</a>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#process">Process</a>
-      <a href="#projects">Work</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="#contact" class="nav-cta">Start a project</a>
-    <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
-      <span></span><span></span>
-    </button>
+    <div class="container nav-inner">
+      <a href="#home" class="logo">FOUR ROOT DIGITAL</a>
+
+      <nav class="nav-links">
+        <a href="#services" class="nav-link">Service</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#work" class="nav-link">Work</a>
+
+        <a href="#pricing" class="nav-link">Pricing</a>
+      </nav>
+
+      <a href="#pricing" class="button button--nav magnetic">
+        <span class="blob1" aria-hidden="true"></span>
+        <span class="blob2" aria-hidden="true"></span>
+        <span class="inner">Work With Us</span>
+      </a>
+
+      <button class="nav-burger" id="navBurger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <!-- ── MOBILE MENU ── -->
   <div class="mobile-menu" id="mobileMenu">
     <nav class="mobile-links">
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#process" class="mobile-link">Process</a>
-      <a href="#projects" class="mobile-link">Work</a>
       <a href="#services" class="mobile-link">Services</a>
-      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#work" class="mobile-link">Work</a>
+      <a href="#process" class="mobile-link">Process</a>
+      <a href="#pricing" class="mobile-link">Pricing</a>
     </nav>
-    <div class="mobile-foot">
-      <span class="mono">Cbe,TN · 2026</span>
-      <a href="#contact" class="btn-primary">Start a project</a>
-    </div>
   </div>
 
   <main>
+    <!-- ── HERO SECTION ── -->
+    <section class="hero hero-pure" id="home">
 
-    <!-- ══ HERO ══ -->
-    <section class="hero torn-section" id="home">
-      <div class="hero-eyebrow">
-        <span class="avail-dot"></span>
-        <span class="mono">Available for new projects · Coimbatore, Tamil Nadu</span>
-      </div>
+      <!-- <div class="hero-bg"></div> -->
 
-      <h1 class="hero-title">
-        <span class="ht-line reveal-line ">Why is your website not converting?</span>
-        <span class="ht-line  reveal-line">I design high-performance websites that turn visitors into clients.</span>
-      </h1>
-
-      <div class="hero-foot">
-        <p class="hero-sub reveal-item">
-          I help businesses grow with fast, modern, and conversion-focused websites built for real results, better user
-          experience, and higher engagement.
-        </p>
-
-        <div class="hero-actions reveal-item">
-          <a href="#contact" class="btn-primary">Start Your Project →</a>
-          <a href="#projects" class="btn-ghost">View My Results</a>
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Available for Freelance Work ✦
         </div>
 
-        <p class="mono reveal-item" style="margin-top: 1.5rem; opacity: 0.6; font-size: 0.8rem;">
-          Fast delivery. Conversion-focused. Built for growth.
-        </p>
+        <span class="hero-label">/ BY FOURROOTDIGITAL</span>
+
+        <h1 class="hero-title" id="scramble-text">BUILDING BRANDS</h1>
+
+        <p class="hero-tagline">that stand out in the digital age.</p>
+
+        <div class="cta-group">
+          <a href="#work" class="button magnetic">
+            <span class="blob1" aria-hidden="true"></span>
+            <span class="blob2" aria-hidden="true"></span>
+            <span class="inner">View My Work</span>
+          </a>
+          <a href="#pricing" class="button magnetic">
+            <span class="blob1" aria-hidden="true"></span>
+            <span class="blob2" aria-hidden="true"></span>
+            <span class="inner">Let's Talk</span>
+          </a>
+        </div>
       </div>
+
+      <div class="scroll-indicator">
+        <span class="scroll-text">Scroll to explore</span>
+        <div class="scroll-line"></div>
+      </div>
+
     </section>
 
-    <!-- ══ MARQUEE ══ -->
-    <div class="marquee">
-
-    </div>
-
-    <!-- ══ ABOUT ══ -->
-    <section class="section torn-section" id="problem">
-      <header class="sec-header">
-        <span class="mono sec-label">01 — Problem</span>
-        <h2 class="sec-title">Why do most websites<br><em>fail to get clients?</em></h2>
-      </header>
-
-      <div class="about-grid">
-        <div class="about-text">
-          <p class="body-large">Most websites fail because they are slow, poorly designed, and not optimized for user
-            experience or conversions. Without a clear structure and strategy, visitors leave without taking action.</p>
-
-          <div class="promise-list">
-            <div class="promise-item">
-              <span class="mono pnum">/01</span>
-              <div class="pcontent">
-                <strong>Slow Load Times</strong>
-                <p>Every second of delay costs you potential customers and trust.</p>
-              </div>
-            </div>
-            <div class="promise-item">
-              <span class="mono pnum">/02</span>
-              <div class="pcontent">
-                <strong>Poor Design</strong>
-                <p>An outdated or confusing look drives users away immediately.</p>
-              </div>
-            </div>
-            <div class="promise-item">
-              <span class="mono pnum">/03</span>
-              <div class="pcontent">
-                <strong>No Strategy</strong>
-                <p>Without conversion-focused layouts, traffic never becomes revenue.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-aside">
-          <div class="skills">
-            <div class="mono sk-head">The Solution</div>
-            <p>A freelance web designer improves your business by creating a website that is fast, mobile-friendly, and
-              designed to convert visitors into customers. The right design increases trust, engagement, and overall
-              growth.</p>
-            <a href="#contact" class="btn-primary">Fix My Website →</a>
-          </div>
-        </div>
+    <!-- ── LOGO MARQUEE ── -->
+    <section class="marquee">
+      <div class="marquee-fade marquee-fade--left"></div>
+      <div class="track" id="track">
+        <!-- SET 1 -->
+        <div class="logo-card"><img src="1.png" alt="Partner Logo"></div>
+        <div class="logo-card"><img src="2.png" alt="Partner Logo"></div>
+        <div class="logo-card"><img src="3.png" alt="Partner Logo"></div>
+        <div class="logo-card"><img src="4.png" alt="Partner Logo"></div>
+        <div class="logo-card"><img src="5.png" alt="Partner Logo"></div>
+        <div class="logo-card"><img src="6.png" alt="Partner Logo"></div>
       </div>
+      <div class="marquee-fade marquee-fade--right"></div>
     </section>
 
-    <!-- ══ PROCESS ══ -->
-    <section class="section section-dark torn-section" id="process">
-      <header class="sec-header">
-        <span class="mono sec-label">02 — Process</span>
-        <h2 class="sec-title">How I work.</h2>
-      </header>
+    <!-- ── service ── -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="badge">Our Services</span>
+          <h2 class="font-display" style="font-size:clamp(2.5rem, 5vw, 4rem); margin-bottom:4rem;">We Build Digital
+            Success.</h2>
+        </div>
 
-      <div class="process-list">
-        <div class="process-item">
-          <span class="mono pr-num">01</span>
-          <div class="pr-body">
-            <div class="mono pr-tag">Discovery</div>
-            <h3 class="pr-title">Understanding Business</h3>
-            <p>We start by understanding your business goals, target audience, and current challenges to create a
-              strategic roadmap.</p>
-          </div>
-          <div class="pr-chips">
-            <span class="chip">Consultation</span>
-            <span class="chip">Strategy</span>
-          </div>
-        </div>
-        <div class="process-item">
-          <span class="mono pr-num">02</span>
-          <div class="pr-body">
-            <div class="mono pr-tag">Design</div>
-            <h3 class="pr-title">Planning & Design</h3>
-            <p>We map out the user journey and create high-fidelity designs focused on clarity, usability, and
-              conversion-driven layouts.</p>
-          </div>
-          <div class="pr-chips">
-            <span class="chip">Figma</span>
-            <span class="chip">UI/UX</span>
-          </div>
-        </div>
-        <div class="process-item">
-          <span class="mono pr-num">03</span>
-          <div class="pr-body">
-            <div class="mono pr-tag">Development</div>
-            <h3 class="pr-title">Building</h3>
-            <p>Turning designs into a fast, responsive, and mobile-friendly website using clean and maintainable code.
+        <div class="services-grid reveal">
+          <div class="service-card">
+            <span class="svc-num">01</span>
+            <h3 class="svc-title">Custom Website Design</h3>
+            <p class="svc-desc">Bespoke UI/UX design tailored to your brand's unique voice and business objectives.
             </p>
           </div>
-          <div class="pr-chips">
-            <span class="chip">js</span>
-            <span class="chip">Responsive</span>
+          <div class="service-card">
+            <span class="svc-num">02</span>
+            <h3 class="svc-title">Responsive Development</h3>
+            <p class="svc-desc">High-performance coding ensuring your site looks and works perfectly on every device.
+            </p>
           </div>
-        </div>
-        <div class="process-item">
-          <span class="mono pr-num">04</span>
-          <div class="pr-body">
-            <div class="mono pr-tag">Optimization</div>
-            <h3 class="pr-title">Performance & Conversions</h3>
-            <p>Final polishing to ensure the site is optimized for speed, search rankings, and business results.</p>
+          <div class="service-card">
+            <span class="svc-num">03</span>
+            <h3 class="svc-title">Landing Pages</h3>
+            <p class="svc-desc">Conversion-focused pages built to turn traffic into leads and revenue.</p>
           </div>
-          <div class="pr-chips">
-            <span class="chip">SEO</span>
-            <span class="chip">Lighthouse</span>
+          <div class="service-card">
+            <span class="svc-num">04</span>
+            <h3 class="svc-title">SEO Optimisation</h3>
+            <p class="svc-desc">Technical and content-level SEO to help your business rank where it matters.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ PROJECTS ══ -->
-    <section class="section torn-section" id="results">
-      <header class="sec-header">
-        <span class="mono sec-label">03 — Why Four Root Digital</span>
-        <h2 class="sec-title">Why hire Four Root Digital<br><em>as your web designer?</em></h2>
-      </header>
+    <!-- ── WHY US ── -->
+    <section class="section" style="background:var(--grey-100);" id="about">
+      <div class="container why-grid">
+        <div class="why-left reveal">
+          <span class="badge">Why Four Root Digital</span>
+          <h2 class="why-title">We Don't Just Build Websites. We Build Systems.</h2>
+          <p style="font-size:1.1rem; opacity:0.7; margin-bottom:2.5rem;">Our approach combines aesthetic excellence
+            with technical precision to drive measurable business growth.</p>
+          <a href="#pricing" class="button magnetic">
+            <span class="blob1" aria-hidden="true"></span>
+            <span class="blob2" aria-hidden="true"></span>
+            <span class="inner">Work With Us</span>
+          </a>
+        </div>
 
-      <div class="about-grid">
-        <div class="about-text">
-          <p class="body-large">Four Root Digital focuses on clean design, fast performance, and business-driven
-            results. Instead of just building websites, we create systems that help you attract and convert customers.
-          </p>
-
-          <div class="promise-list">
-            <div class="promise-item">
-              <span class="mono pnum">/01</span>
-              <div class="pcontent">
-                <strong>Clean & Modern Design</strong>
-                <p>Minimalist aesthetics that highlight your brand value without clutter.</p>
+        <div class="why-right">
+          <div class="promise-grid">
+            <div class="promise-item reveal">
+              <span class="p-num">01</span>
+              <div class="p-content">
+                <h3>Strategy First</h3>
+                <p>We analyze your business goals before a single line of code is written.</p>
               </div>
             </div>
-            <div class="promise-item">
-              <span class="mono pnum">/02</span>
-              <div class="pcontent">
-                <strong>Fast Performance</strong>
-                <p>Optimized code that ensures your site loads in the blink of an eye.</p>
+            <div class="promise-item reveal">
+              <span class="p-num">02</span>
+              <div class="p-content">
+                <h3>Premium Aesthetics</h3>
+                <p>High-end designs that position your brand at the top of your industry.</p>
               </div>
             </div>
-            <div class="promise-item">
-              <span class="mono pnum">/03</span>
-              <div class="pcontent">
-                <strong>Business Driven</strong>
-                <p>Every element is designed with your bottom line in mind.</p>
+            <div class="promise-item reveal">
+              <span class="p-num">03</span>
+              <div class="p-content">
+                <h3>Performance Led</h3>
+                <p>Lightning-fast load times for better SEO and higher user retention.</p>
+              </div>
+            </div>
+            <div class="promise-item reveal">
+              <span class="p-num">04</span>
+              <div class="p-content">
+                <h3>Global Reach</h3>
+                <p>Serving ambitious brands across the globe from our digital-first studio.</p>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="about-aside">
-          <div class="skills">
-            <div class="mono sk-head">How websites increase sales</div>
-            <p>A well-designed website increases sales by improving user experience, building trust, and guiding
-              visitors toward taking action. It turns traffic into paying customers.</p>
-            <a href="#contact" class="btn-primary">Get Results →</a>
-          </div>
-        </div>
       </div>
-
-      <p class="mono projects-foot">Business-driven results · Clean design · Fast performance
-      </p>
     </section>
 
-    <!-- ══ SERVICES ══ -->
-    <section class="section section-tint torn-section" id="services">
-      <header class="sec-header">
-        <span class="mono sec-label">04 — Services</span>
-        <h2 class="sec-title">What I offer.</h2>
-      </header>
+    <!-- ── PROCESS ── -->
+    <section class="section" id="process">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:6rem;" class="reveal">
+          <span class="badge">The Roadmap</span>
+          <h2 class="font-display" style="font-size:clamp(2.5rem, 5vw, 4rem);">Our Proven Process.</h2>
+        </div>
 
-      <div class="services-grid">
-        <div class="svc-card">
-          <span class="mono svc-num">01</span>
-          <h3 class="svc-title">What services does a freelance web designer offer?</h3>
-          <p>Website design, UI/UX optimization, landing page creation, and performance improvements to help businesses
-            grow online.</p>
-          <div class="svc-chips">
-            <span class="chip">UI/UX</span>
-            <span class="chip">Landing Pages</span>
-            <span class="chip">Performance</span>
+        <div class="process-grid">
+          <div class="process-card reveal">
+            <div class="pr-icon">1</div>
+            <h3 class="pr-title">Discover</h3>
+            <p class="pr-desc">Deep dive into your business, competitors, and target audience.</p>
           </div>
-        </div>
-        <div class="svc-card">
-          <span class="mono svc-num">02</span>
-          <h3 class="svc-title">How do you choose the right web design for your business?</h3>
-          <p>The right web design depends on your goals, audience, and industry. A good designer focuses on clarity,
-            usability, and conversion-driven layouts.</p>
-          <div class="svc-chips">
-            <span class="chip">Conversion</span>
-            <span class="chip">Usability</span>
-            <span class="chip">Strategy</span>
+          <div class="process-card reveal">
+            <div class="pr-icon">2</div>
+            <h3 class="pr-title">Design</h3>
+            <p class="pr-desc">Crafting high-fidelity UI/UX mockups for your approval.</p>
           </div>
-        </div>
-        <div class="svc-card">
-          <span class="mono svc-num">03</span>
-          <h3 class="svc-title">Why is website performance important?</h3>
-          <p>Website performance affects speed, user experience, and search rankings. Faster websites keep users engaged
-            and increase conversions.</p>
-          <div class="svc-chips">
-            <span class="chip">Speed</span>
-            <span class="chip">SEO</span>
-            <span class="chip">Engagement</span>
+          <div class="process-card reveal">
+            <div class="pr-icon">3</div>
+            <h3 class="pr-title">Develop</h3>
+            <p class="pr-desc">Building your site with clean, scalable, and modern code.</p>
           </div>
-        </div>
-        <div class="svc-card">
-          <span class="mono svc-num">04</span>
-          <h3 class="svc-title">How much does a freelance website cost?</h3>
-          <p>The cost depends on features, complexity, and scope. Simple websites cost less, while custom solutions
-            require higher investment.</p>
-          <div class="svc-chips">
-            <span class="chip">Custom</span>
-            <span class="chip">Scalable</span>
-            <span class="chip">ROI Focused</span>
+          <div class="process-card reveal">
+            <div class="pr-icon">4</div>
+            <h3 class="pr-title">Deploy</h3>
+            <p class="pr-desc">Launching your site and ensuring everything is optimized.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ FAQ ══ -->
-    <section class="section torn-section" id="faq">
-      <header class="sec-header">
-        <span class="mono sec-label">05 — FAQ</span>
-        <h2 class="sec-title">Common questions.</h2>
-      </header>
-
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary class="faq-q"><span>How long does it take to build a website?</span><span class="faq-ico">+</span>
-          </summary>
-          <p class="faq-a">Most websites take between 1 to 3 weeks depending on complexity, features, and revisions.</p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-q"><span>Do I need a custom website or template?</span><span class="faq-ico">+</span>
-          </summary>
-          <p class="faq-a">If you want uniqueness and better performance, a custom website is the best choice. Templates
-            are faster but less flexible.</p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-q"><span>Will my website be mobile-friendly?</span><span class="faq-ico">+</span>
-          </summary>
-          <p class="faq-a">Yes, all modern websites are designed to be fully responsive and work seamlessly on mobile
-            devices.</p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-q"><span>Can I update the website myself?</span><span class="faq-ico">+</span></summary>
-          <p class="faq-a">Yes, websites can be built with easy-to-manage systems so you can update content without
-            technical knowledge.</p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-q"><span>Do you provide ongoing support?</span><span class="faq-ico">+</span></summary>
-          <p class="faq-a">Yes, ongoing support and updates can be provided based on your needs.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- ══ CONTACT ══ -->
-    <section class="section section-dark torn-section" id="contact">
-      <header class="sec-header">
-        <span class="mono sec-label">06 — Contact</span>
-        <h2 class="sec-title">Looking for a website that<br>actually <em>brings clients?</em></h2>
-      </header>
-
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p>Let's build something that works.</p>
-
-          <div class="contact-rows">
-            <div class="contact-row">
-              <span class="mono cr-label">Email</span>
-              <a href="mailto:hello@fourroot.digital" class="cr-val">hello@fourroot.digital</a>
-            </div>
-            <div class="contact-row">
-              <span class="mono cr-label">Location</span>
-              <span class="cr-val">Coimbatore,Tamil Nadu, India</span>
-            </div>
-            <div class="contact-row">
-              <span class="mono cr-label">Status</span>
-              <span class="cr-val cr-avail"><span class="avail-dot"></span>Available for work</span>
-            </div>
-            <div class="contact-row">
-              <span class="mono cr-label">Response</span>
-              <span class="cr-val">Within 24 hours</span>
-            </div>
-          </div>
-
-
+    <!-- ── PORTFOLIO ── -->
+    <section class="section" style="background:var(--black); color:var(--white);" id="work">
+      <div class="container">
+        <div style="margin-bottom:6rem;" class="reveal">
+          <span class="badge" style="background:rgba(255,255,255,0.1); color:var(--white);">Selected Work</span>
+          <h2 class="font-display" style="font-size:clamp(2.5rem, 5vw, 4rem);">Proof of Craft.</h2>
         </div>
 
-        <form class="contact-form" id="contactForm"
-          action="https://script.google.com/macros/s/AKfycbz2T8I-YdIyRgGyiYuHGvD6Qj7gsgYgp5Ql7OpkjZDBwPgySwlT_3r1MkSljhmqp6cNPA/exec"
-          method="POST">
-          <div class="fg">
-            <label class="mono fl" for="f-name">Name</label>
-            <input class="fi" id="f-name" name="name" type="text" placeholder="Your name" required>
+        <div class="portfolio-grid" style="grid-template-columns: repeat(2, 1fr);">
+          <!-- Project 1 -->
+          <div class="project-card reveal">
+            <div class="project-img">
+              <div
+                style="width:100%; height:100%; background:#1a1a1a; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.1); font-size:2rem; font-family:var(--font-display);">
+                Bella Vista</div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">Restaurant · Concept</span>
+              <h3 class="project-title">Bella Vista Fine Dining</h3>
+            </div>
           </div>
-          <div class="fg">
-            <label class="mono fl" for="f-email">Email</label>
-            <input class="fi" id="f-email" name="email" type="email" placeholder="your@email.com" required>
+          <!-- Project 2 -->
+          <div class="project-card reveal">
+            <div class="project-img">
+              <div
+                style="width:100%; height:100%; background:#1a1a1a; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.1); font-size:2rem; font-family:var(--font-display);">
+                Maison Blanc</div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">Retail · Concept</span>
+              <h3 class="project-title">Maison Blanc Fashion</h3>
+            </div>
           </div>
-
-          <div class="fg">
-            <label class="mono fl" for="f-msg">Message</label>
-            <textarea class="fi fi-textarea" id="f-msg" name="message" placeholder="Tell me about your project..."
-              required></textarea>
-          </div>
-          <button class="btn-primary" type="submit">Start Your Project →</button>
-        </form>
+        </div>
       </div>
     </section>
 
+    <!-- ── PRICING ── -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:6rem;" class="reveal">
+          <span class="badge">Pricing Plans</span>
+          <h2 class="font-display" style="font-size:clamp(2.5rem, 5vw, 4rem);">Simple, Transparent Pricing.</h2>
+        </div>
+
+        <div class="pricing-layout" style="grid-template-columns: repeat(2, 1fr); max-width: 1000px; margin: 0 auto;">
+          <div class="package-card reveal">
+            <h3 class="pkg-title">Basic Package</h3>
+            <div style="font-size: 2.5rem; font-family: var(--font-display); margin: 1.5rem 0; color: var(--gold);">
+              ₹ 3,599</div>
+            <p style="opacity:0.6;">Perfect for landing pages and small businesses needing a clean digital presence.
+            </p>
+            <ul class="pkg-list">
+              <li>Single Page Design</li>
+              <li>Responsive Dev</li>
+              <li>Contact Form</li>
+              <li>Basic SEO</li>
+              <li> </li>
+
+            </ul>
+            <a href="https://forms.gle/pYxPxpgPengcSFAq9" class="button button--full magnetic">
+              <span class="blob1" aria-hidden="true"></span>
+              <span class="blob2" aria-hidden="true"></span>
+              <span class="inner">Get Started →</span>
+            </a>
+          </div>
+          <div class="package-card reveal">
+            <h3 class="pkg-title">Pro Package</h3>
+            <div style="font-size: 2.5rem; font-family: var(--font-display); margin: 1.5rem 0; color: var(--gold);">
+              ₹ 5,999</div>
+            <p style="opacity:0.6;">Comprehensive solutions for growing brands needing multi-page authority.</p>
+            <ul class="pkg-list">
+              <li>Multi-page Website</li>
+              <li> SEO Audit</li>
+              <li>Priority Support</li>
+              <li>Contact Form</li>
+              <li>Other Preference</li>
+
+
+            </ul>
+            <a href="https://forms.gle/pYxPxpgPengcSFAq9" class="button button--full magnetic">
+              <span class="blob1" aria-hidden="true"></span>
+              <span class="blob2" aria-hidden="true"></span>
+              <span class="inner">Get Started →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── INSIGHTS PLACEHOLDER ── -->
+    <section class="section" style="background:var(--grey-100);">
+      <div class="container">
+        <div style="text-align:center;" class="reveal">
+          <span class="badge">Insights</span>
+          <h2 class="font-display" style="font-size:clamp(2rem, 4vw, 3rem); margin-bottom:2rem;">Digital Journal</h2>
+          <div
+            style="padding:4rem; border:1px dashed var(--grey-300); border-radius:var(--radius); color:var(--grey-800); opacity:0.5;">
+            Insights & Articles Coming Soon.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:6rem;" class="reveal">
+          <span class="badge">FAQ</span>
+          <h2 class="font-display" style="font-size:clamp(2.5rem, 5vw, 4rem);">Common Questions.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary class="faq-summary">
+              <span class="faq-q">How long does a project take?</span>
+              <div class="faq-plus"><span></span><span></span></div>
+            </summary>
+            <p class="faq-a">Most websites take between 2 to 4 weeks depending on the complexity and content
+              readiness.
+              We prioritize quality and technical perfection in every build.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary class="faq-summary">
+              <span class="faq-q">Do you work with global clients?</span>
+              <div class="faq-plus"><span></span><span></span></div>
+            </summary>
+            <p class="faq-a">Yes, we serve ambitious brands worldwide. Our digital-first workflow allows us to
+              collaborate seamlessly across different time zones.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary class="faq-summary">
+              <span class="faq-q">Will my site be mobile-friendly?</span>
+              <div class="faq-plus"><span></span><span></span></div>
+            </summary>
+            <p class="faq-a">Every site we build is mobile-first. We ensure your digital presence is flawless across
+              all
+              devices, from smartphones to large desktop screens.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary class="faq-summary">
+              <span class="faq-q">Can I update the content myself?</span>
+              <div class="faq-plus"><span></span><span></span></div>
+            </summary>
+            <p class="faq-a">Yes, we build our sites with user-friendly systems that allow you to manage text and
+              images
+              easily without touching any code.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary class="faq-summary">
+              <span class="faq-q">Do you provide SEO services?</span>
+              <div class="faq-plus"><span></span><span></span></div>
+            </summary>
+            <p class="faq-a">All our builds include foundational technical SEO. We also offer advanced SEO strategies
+              to
+              help your business gain visibility and drive organic traffic.</p>
+          </details>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ══ FOOTER ══ -->
+  <!-- ── FOOTER ── -->
   <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="footer-wordmark">Four Root Digital.</span>
-        <span class="mono footer-quote">Simplicity is the ultimate sophistication.</span>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">FOUR ROOT <span>DIGITAL</span></a>
+          <p class="footer-tagline">We build digital presence that drives real growth.</p>
+
+        </div>
+        <div>
+          <span class="footer-head">Company</span>
+          <div class="footer-list">
+            <a href="#services">Services</a>
+            <a href="#work">Our Work</a>
+            <a href="#about">Why Us</a>
+            <a href="#process">Process</a>
+          </div>
+        </div>
+        <div>
+          <span class="footer-head">Resources</span>
+          <div class="footer-list">
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+        </div>
       </div>
-      <div class="footer-nav">
-        <div class="fn-col">
-          <span class="mono fn-head">Navigate</span>
-          <a href="#about">About</a>
-          <a href="#process">Process</a>
-          <a href="#projects">Work</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="fn-col">
-          <span class="mono fn-head">Social</span>
-          <a href="https://www.instagram.com/four_root_digital/">Instagram</a>
-          <a href="https://wa.me/918300133235">WhatsApp</a>
-        </div>
-        <div class="fn-col">
-          <span class="mono fn-head">Contact</span>
-          <a href="mailto:anandhavignesh2@gmail.com">hello@fourroot.digital</a>
-          <a href="#contact">Start a project</a>
-        </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Four Root Digital. All rights reserved.</span>
+        <span>Serving Clients Globally.</span>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="mono">© 2026 Four Root Digital. All rights reserved.</span>
-      <span class="mono">Coimbatore, Tamil Nadu, India</span>
     </div>
   </footer>
 
-  <!-- GSAP for Premium Motion -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 
