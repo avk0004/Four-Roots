@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const revealElements = document.querySelectorAll('.reveal');
   revealElements.forEach(el => {
-    // Check if it's the services grid to do a stagger
+    // Check if it's the services grid or pricing layout for staggers
     if (el.classList.contains('services-grid')) {
       gsap.from(el.querySelectorAll('.service-card'), {
         scrollTrigger: {
@@ -202,6 +202,18 @@ document.addEventListener('DOMContentLoaded', () => {
         stagger: 0.15,
         duration: 1,
         ease: "power3.out"
+      });
+    } else if (el.classList.contains('pricing-layout')) {
+      gsap.from(el.querySelectorAll('.package-card'), {
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+        },
+        y: 40,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 1.2,
+        ease: "power4.out"
       });
     } else {
       gsap.from(el, {
@@ -215,6 +227,21 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // Mobile Visibility Fix for Pricing (Ensure JS overrides any layout glitches)
+  const fixMobileLayout = () => {
+    const pricingLayout = document.querySelector('.pricing-layout');
+    if (pricingLayout) {
+      if (window.innerWidth < 1024) {
+        pricingLayout.style.gridTemplateColumns = '1fr';
+      } else {
+        pricingLayout.style.gridTemplateColumns = 'repeat(2, 1fr)';
+      }
+    }
+  };
+
+  window.addEventListener('resize', fixMobileLayout);
+  fixMobileLayout();
 
   // ── HERO STATS COUNTER ───────────────────
   function animateStats() {

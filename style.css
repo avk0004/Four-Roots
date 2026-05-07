@@ -978,17 +978,19 @@ img {
   transform: translateY(-8px);
 }
 
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
 /* ── PRICING & FORM ── */
 .pricing-layout {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 6rem;
-}
-
-.package-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .package-card {
@@ -996,7 +998,7 @@ img {
   padding: 3rem;
   border: 1px solid var(--grey-200);
   border-radius: var(--radius);
-  transition: 0.4s var(--ease);
+  transition: 0.3s var(--ease);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1424,6 +1426,15 @@ details[open] .faq-q {
 
   .pricing-layout {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .package-card {
+    padding: 2rem;
   }
 
   .footer-top {
